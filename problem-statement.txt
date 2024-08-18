@@ -1,0 +1,92 @@
+Assignment Overview:
+Create a Nodejs backend server for menu management. 
+The menu will be divided into 3 parts in the following order:
+Category
+Sub Category: A category can have multiple sub-categories
+Items: A Subcategory can have multiple items in it
+** To demo the application, you can use Postman. 
+
+Assignment Objectives
+Project setup
+Create Category, Subcategory & Items
+Get Category, Subcategory & Items
+Edit Category, Subcategory & Items
+Search by item name
+Documentation
+
+Project Setup
+Setup the project using Nodejs & Express JS
+Database: You’re free to use any database of your choice. 
+
+CREATE 
+Create Category
+API to create a category
+Attributes to create a category:
+Name: String
+Image: URL
+Description: String
+Tax Applicability: Boolean
+Tax: Number, if applicable
+Tax type
+Create Sub Category
+Sub-categories will be created under a category 
+A category can have multiple subcategories in it
+Sub-category is optional
+API to create a sub-category under a category 
+Attributes to create a sub-category:
+Name: String
+Image: URL
+Description: String
+Tax Applicability: Boolean, Default: Category tax applicability 
+Tax: Number, Default: Category tax number
+Create Items
+Items will be created under a sub-category or a category  
+A sub-category can have multiple items in it
+API to create items
+Attributes to create an item:
+Name: String
+Image: URL
+Description: String
+Tax Applicability: Boolean
+Tax: Number, if applicable
+Base Amount: Number
+Discount: Number
+Total Amount: Number (Base - Discount)
+
+GET
+Get Category
+API to get all categories
+API to get a category by name or ID along with its attributes
+Get Sub Category
+API to get all sub-categories
+API to get all sub categories under a category
+API to get a sub-category by name or ID along with its attributes
+Get Items
+API to get all items 
+API to get all items under a category
+API to get all items under a sub-category
+API to get an item by name or ID along with its attributes
+EDIT
+Edit Category
+API to edit category attributes
+Edit Sub Category
+API to edit sub category attributes
+Edit Items
+API to edit item attributes
+
+SEARCH item
+API to search the item by its name
+
+
+
+
+Documentation
+Provide inline comments in code for clarity wherever needed.
+Create a short Loom video explaining all the operations.
+Host the code on your personal Github repository
+Write a README.md file with instructions on how to run the application locally and any other relevant information.
+Short answer to the following questions:
+Which database you have chosen and why?
+3 things that you learned from this assignment?
+What was the most difficult part of the assignment?
+What you would have done differently given more time?
