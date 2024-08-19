@@ -8,6 +8,8 @@ const categoryRoute = require("./routes/category");
 const subcategoryRoute = require("./routes/subcategory");
 const itemRoute = require("./routes/item");
 
+
+// CORS - Cross-Origin Resource Sharing - browser mechanism which enables controlled access to resources located outside of a given domain.
 const cors = require("cors");
 const corsOptions = {
   origin: "*",
@@ -16,6 +18,8 @@ const corsOptions = {
 };
 app.use(cors(corsOptions));
 
+
+// database connection
 mongoose
   .connect(process.env.MONGO_URL)
   .then(() => {
@@ -25,11 +29,15 @@ mongoose
     console.log(err);
   });
 
+
+// routes initialization
 app.use(express.json());
 app.use("/api/categories", categoryRoute);
 app.use("/api/subcategories", subcategoryRoute);
 app.use("/api/items", itemRoute);
 
+
+// creation of express server
 app.listen(process.env.PORT || 5000, () => {
   console.log("Backend server is running..");
 });
